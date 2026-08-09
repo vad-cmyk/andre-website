@@ -1,0 +1,20 @@
+{
+  "name": "andre-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^24.43.1"
+  },
+  "devDependencies": {
+    "vercel": "^58.9.0"
+  }
+}
