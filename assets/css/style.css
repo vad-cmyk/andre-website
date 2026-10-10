@@ -253,7 +253,7 @@ p { margin: 0 0 1em; }
 .nav-links a[aria-current="page"] { color: var(--gold); }
 
 .nav-actions { display: flex; align-items: center; gap: 14px; }
-.nav-phone {
+.nav-cta {
   display: none;
   align-items: center;
   gap: 8px;
@@ -265,10 +265,10 @@ p { margin: 0 0 1em; }
   padding: 0.6em 1em;
   transition: border-color 0.25s, background-color 0.25s;
 }
-.nav-phone:hover { border-color: var(--gold); background: rgba(201, 162, 87, 0.08); }
-.nav-phone svg { width: 16px; height: 16px; stroke: var(--gold); }
+.nav-cta:hover { border-color: var(--gold); background: rgba(201, 162, 87, 0.08); }
+.nav-cta svg { width: 16px; height: 16px; stroke: var(--gold); }
 @media (min-width: 640px) {
-  .nav-phone { display: inline-flex; }
+  .nav-cta { display: inline-flex; }
 }
 
 .nav-toggle {
