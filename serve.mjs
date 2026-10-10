@@ -22,6 +22,8 @@ const MIME = {
   '.ttf':  'font/ttf',
   '.mjs':  'application/javascript',
   '.webp': 'image/webp',
+  '.xml':  'application/xml',
+  '.txt':  'text/plain',
 };
 
 const server = http.createServer((req, res) => {
