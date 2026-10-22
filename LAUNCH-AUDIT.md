@@ -63,7 +63,7 @@ Business: Vision Decorators — sole trader, painting & decorating, Norwich & No
 
 ## Client actions (can't be done in code)
 - [ ] **Enable Vercel Web Analytics**: Vercel dashboard → `andre-website` project → **Analytics** tab → **Enable**. Until this is clicked, `/_vercel/insights/script.js` 404s (harmless — the rest of the site is unaffected — but it's why Best Practices reads 96 instead of 100, and the "email_click" event won't record until it's on)
-- [ ] Set up / claim a **Google Business Profile** for Vision Decorators at 123 Mile Cross Lane, Norwich, NR6 6RQ, category "Painter" / "House painter", service area Norfolk, and start collecting real reviews
+- [x] **Google Business Profile** — already exists (`Vision Decorators`, Norwich). Linked into the site's `HomeAndConstructionBusiness` structured data as `sameAs` on every indexable page (`https://www.google.com/maps?cid=710345531436384366`), confirming to Google it's the same business entity as the website
 - [ ] Review `terms.html`'s three `TODO(client)`-marked sections (payment terms, cancellation notice period, 12-month workmanship guarantee) and confirm they match what you actually want to commit to
 - [ ] Replace the 6 placeholder testimonials (marked in HTML comments on `index.html`, `door-painting.html`, `lime-wash-painting.html`, `general-painting.html`) with real customer reviews when available
 
