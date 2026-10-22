@@ -5,7 +5,7 @@ Production domain: `https://www.vision-decorators.com` (apex `vision-decorators.
 Business: Vision Decorators — sole trader, painting & decorating, Norwich & Norfolk. Contact: email only (`office@vision-decorators.com`), no form, no payments/bookings taken on-site.
 
 ## Summary (after fixes, verified live)
-✅ 20 pass · 🧑‍💼 2 client actions · N/A 2
+✅ 21 pass · 🧑‍💼 1 client action · N/A 2
 
 **Lighthouse (mobile), live production site — before → after:**
 
@@ -13,7 +13,7 @@ Business: Vision Decorators — sole trader, painting & decorating, Norwich & No
 |---|---|---|
 | Performance | 71 | **94** |
 | Accessibility | 96 | **100** |
-| Best Practices | 100 | 96* |
+| Best Practices | 100 | **100** |
 | SEO | 100 | **100** |
 | LCP | 4.6s | **3.0s** |
 | FCP | 4.6s | **1.6s** |
@@ -22,7 +22,7 @@ Business: Vision Decorators — sole trader, painting & decorating, Norwich & No
 | Render-blocking savings available | 2,250ms | 210ms |
 | Image-delivery savings available | 1,392 KiB | 152 KiB |
 
-*Best Practices dipped from 100→96 only because of the one remaining client action below (Analytics not yet enabled causes a console 404) — see Client actions.
+Best Practices briefly read 96 right after launch because Web Analytics hadn't been enabled yet in the Vercel dashboard (the script 404'd, logging a console error). Client enabled it; re-verified live — back to 100, `window.va` confirmed live and functional, zero console errors.
 
 ## Checks
 
@@ -62,7 +62,7 @@ Business: Vision Decorators — sole trader, painting & decorating, Norwich & No
 | Google Business Profile | 🧑‍💼 | Client action, below |
 
 ## Client actions (can't be done in code)
-- [ ] **Enable Vercel Web Analytics**: Vercel dashboard → `andre-website` project → **Analytics** tab → **Enable**. Until this is clicked, `/_vercel/insights/script.js` 404s (harmless — the rest of the site is unaffected — but it's why Best Practices reads 96 instead of 100, and the "email_click" event won't record until it's on)
+- [x] **Enable Vercel Web Analytics** — done. `/_vercel/insights/script.js` confirmed live (200, `application/javascript`), `window.va` confirmed functional on the live site, zero console errors, Best Practices back to 100
 - [x] **Google Business Profile** — already exists (`Vision Decorators`, Norwich). Linked into the site's `HomeAndConstructionBusiness` structured data as `sameAs` on every indexable page (`https://www.google.com/maps?cid=710345531436384366`), confirming to Google it's the same business entity as the website
 - [ ] Review `terms.html`'s three `TODO(client)`-marked sections (payment terms, cancellation notice period, 12-month workmanship guarantee) and confirm they match what you actually want to commit to
 - [ ] Replace the 6 placeholder testimonials (marked in HTML comments on `index.html`, `door-painting.html`, `lime-wash-painting.html`, `general-painting.html`) with real customer reviews when available
