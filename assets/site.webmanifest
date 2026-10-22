@@ -1,0 +1,13 @@
+{
+  "name": "Vision Decorators",
+  "short_name": "Vision Decorators",
+  "description": "Painting and decorating across Norwich & Norfolk",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6ED",
+  "theme_color": "#0E1D30",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

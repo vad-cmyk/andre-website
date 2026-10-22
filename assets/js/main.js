@@ -1,7 +1,24 @@
+/* Vercel Analytics stub — queues events until /_vercel/insights/script.js loads. */
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+
 (() => {
   "use strict";
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- track "Email us" clicks as a conversion event ---------- */
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      window.va("event", { name: "email_click", data: { page: location.pathname } });
+    });
+  });
+
+  /* ---------- non-blocking font stylesheet swap (CSP-safe, no inline handlers) ---------- */
+  document.querySelectorAll("link[data-font-swap]").forEach((link) => {
+    const activate = () => { link.media = "all"; };
+    if (link.sheet) activate();
+    else link.addEventListener("load", activate, { once: true });
+  });
 
   /* ---------- mobile nav ---------- */
   const navToggle = document.querySelector("[data-nav-toggle]");
